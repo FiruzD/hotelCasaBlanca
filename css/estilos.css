@@ -1,0 +1,437 @@
+@import url ('https://fonts.googleapis.com/css? family=Montserrat:400,700|Pacifico');
+@import url ('https://fonts.googleapis.com/css2? family = Open + Sans & display = swap'); 
+
+*
+
+:root{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/*-------------------Estilos base----------------------*/
+img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+.container--flex{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  
+}
+.column{
+    width: 100%;
+}
+
+/*-------------------Estilos header--------------------*/
+.contenedor{
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+    padding-left: auto;
+}
+
+.header{
+    height: 100vh;
+    /* 02 */
+    
+    background-image: linear-gradient(to top, rgba(251, 194, 235, 0.486) 0%, hsla(218, 68%, 79%, 0.514) 100%), url(../img/woman.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+
+.hamburguer{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    width: 30vw;
+    height: 100%;
+    /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c0ee 100%); */
+    /* 02 */
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    /* 028 */
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 0;
+    transform: translateX(110%);
+    transition:transform 0.3s ease-in-out;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+
+}
+
+.spread{
+    transform: translateX(0);
+}
+
+.menu-navegacion a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+/**************Estilos principales*****************/
+
+.group--color .container{
+   /* background: #DE423A;*/
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+    background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+
+
+}
+.subtitulohabitaciones{
+    margin: 15px 0;
+    font-size: 1.8em;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    left: 50px;
+}
+
+.column__title{
+    font-size: 1.3em;
+}
+
+.main__about_description .column:nth-child(2){
+    padding: 10px;
+
+}
+.btn{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    background: #DE423A;
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
+}
+.group__title{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-weight: 100;
+    font-style: 1.8em;
+    margin: 30px;
+}
+
+.today-special .column{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.today-special__img{
+    margin: auto;
+    max-width: 350px;
+    
+}
+.today-special__title{
+    text-align: center;
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.today-special__price{
+    text-align: center;
+    font-style: 1.5em;
+    color: #DE423A;
+    font-weight: bold;
+}
+/**************Estilos del footer*****************/
+.main-footer{
+    background: #222;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-style: .8em;
+}
+
+.main-footer [class*="icon-"]{
+    color: white;
+    text-decoration: none;
+}
+.main-footer [class*="icon-"]:before {
+    position: relative;
+    top: 3px;
+    right: 5px;
+}
+/**************Estilos responsive*****************/
+@media screen and (min-width:480px){
+    .logo{
+        color: white;
+    }
+    .main-header__contactInfo{
+        text-align: right;
+    }
+    .main-header__contactInfo__phone{
+        background: none;
+    }
+    .main-header__contactInfo__address{
+        color: white;
+    }
+    .main-nav{
+        background: rgba(0,0,0,0.85)
+    }
+    .banner{
+        margin-top: -300px;
+        z-index: -1000;
+    }
+    .column--50{
+        width: 49%;
+    }
+    .column--50-25{
+        width: 49%;
+    }
+    .column--33{
+        width: 33%;
+    }
+    .main__about__description .column:nth-child(2){
+        padding-left: 20px;
+        font-size: .9em;
+    }
+    .main__about__description .btn{
+        margin: 0;
+    }
+    .today-special .column{
+        border: 5px solid #ddd;
+        padding: 5px;
+    }
+    .today-special__img{
+        height: 200px;
+        object-fit: cover;
+    }
+    
+
+}
+.subtitulohabitaciones{
+    font-weight: lighter;
+    color: #9f8ad0;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 20;
+    margin-bottom: 30px;
+    background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+   
+}
+/* Services */
+.subtitulo{
+    color: #9f8ad0;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.contenedor-servicio img{
+    width: 40%; 
+
+}
+
+.checklist-servicio{
+    width: 20%;
+}
+
+.service{
+    margin-bottom: 20px;
+}
+
+.n-service{
+    margin-bottom: 7px;
+    color: #9f8ad0;
+}
+
+.number{
+    display: inline-block;
+    /* 02 */
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+/*imagen  */
+
+.gallery{
+    background: #f2f2f2;
+}
+
+.contenedor-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.img-galeria{
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+.imagen-light{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.534);
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.agregar-imagen{
+    width: 60%;
+    transform: scale(0);
+    border-radius: 10px;
+    transition: transform .3s .2s;
+}
+
+.showImage{
+    transform: scale(1);
+}
+
+.show{
+    transform: translate(0);
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+/*  Nosotros  */
+/* About us */
+
+.about-us {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+
+
+.contenedor-articulo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+
+.articulo {
+    width: 29%;
+    background: #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+   background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.articulo:hover {
+    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+}
+
+.articulo>i {
+    font-size: 30px;
+    color: #fff;
+    background: #1FDE82;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(31, 222, 130, .46);
+}
+
+.articulo>h3 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.articulo>p {
+    font-weight: 100;
+    color: #5D6678;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.articulo>a {
+    color: #5D6678;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.articulo>a:hover {
+    color: #1FDE82;
+    transition: color .10s;
+}

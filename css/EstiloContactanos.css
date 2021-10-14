@@ -1,0 +1,430 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	font-family: "Montserrat", sans-serif;		
+}
+#contenedor{
+	width:100%;
+}
+/*Para teléfonos móviles:*/
+[class*="col-"]{
+	width:100%;
+	float:left;
+	padding:0 15px;
+}
+.row::after{
+	content:"";
+	clear:both;
+	display:table;
+}
+
+form{
+	
+	width:80%;
+	border:1px solid #ccc;
+	padding: 20px;
+	background:#eee;
+	border-radius:15px;
+	margin-bottom: 50px;	
+}
+label{
+	font-weight:bold;	
+}
+form div{
+	margin:0;
+}
+
+input[type=text],input[type=number],textarea{
+	margin: 20px 0 0 0;
+	padding: 10px 0 10px 0;
+	width:70%;
+	border:1px solid #000;
+	border-radius:0px;
+}
+#btnEnviar{
+	margin:20px 0 0;
+	padding:9px 38px;
+	background: #FF214F;
+	border:1px solid #FF214F;
+	border-radius:15px;
+	cursor:pointer;
+	color:#FFFFFF;
+	font-weight:bold;	
+	text-align:center;	
+}
+#btnEnviar:hover{
+	background: #FFFFFF;
+	color:#FF214F;
+}
+form{	
+	padding: 20px;
+	margin:20px;
+}
+
+.Contactanos{
+	text-align:left;
+	color:#FF214F;
+	font-size:46px;
+	margin: 40px 0 18px;
+	padding:40px 0 0 0;
+}
+.descripcion{
+	color:#232323;
+	font-size:22px;
+	margin: 0 0 18px;
+	text-align:justify;
+}
+.informes{
+	color:#6F6F6F;
+	font-size:14px;
+	margin: 0 0 20px;
+	text-align:justify;
+
+}
+
+/* Imagenes Responsive */
+img{
+	max-width:100%;		
+}
+.interior{
+	max-width:1200px;
+	text-align: center;
+	margin:0 auto;	
+}
+#header{	
+	color:#6F6F6F;	
+	padding:10px 40px 0px 40px;/*T R B L*/	
+	text-align:left;	
+}
+.phone{
+	font: 15px Montserrat, sans-serif;		
+}
+.email{
+	font: 11px Monserat,sans-serif;/* Alinear items en el centro */ 
+}
+.imgLogoTop{
+	padding:15px 0px 0px 0px;/*T R B L*/	
+}
+.menu_bar{
+	display:none;
+}
+#menu_h{
+	margin-left:0px;
+	margin-bottom:0px;
+	background-color:rgb(0, 0, 0,0);	
+	float:right;
+}
+#menu_h ul{
+	list-style:none;
+	overflow:hidden;
+	/*margen*/
+	text-align:right;
+	margin-top:0px;
+	margin-left: 8px;
+	margin-right: 8px;
+	/*relleno*/
+	padding:20px 13px 20px 13px;		
+}
+
+#menu_h ul li{
+	float:left;
+	margin:0 30px;		
+}
+#menu_h ul li a{
+	color:#000;
+	display:block;
+	text-decoration:none;	
+	line-height:2.5em;
+	transition:1s;
+	font-size: 12px;
+}
+
+#menu_h ul li a:hover{
+	color:#6F6F6F;	
+}
+
+.hero{
+	text-align:center;
+	color:#ededed;
+}
+.hero div{
+	background:rgba(0,0,0,0.5);	
+	margin:0px 0px 0px 0px;/*T R B L*/
+	padding:250px 0px 250px 0px; /*T R B L*/	
+}
+.hero div p{
+	opacity: 0.8;
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 25px;
+	font-size: 18px;
+}
+.hero div h1{
+	font-weight:600;
+	font-size: 57px;
+	color:#FFF;
+	
+}
+#verProyecto{
+	border:2px solid rgba(0,0,0,1);
+	padding: 9px 38px;
+	margin: 0 10px;
+	text-decoration: none;
+	border-radius: 50px;
+	font-size:0.9em;
+	background: #ffffff;
+    border-color: #ffffff;
+    color: #232323;
+	font-size: 13px;
+}
+#verProyecto:hover{
+	color:#ffffff;
+	background:rgba(0,0,0,0.5);
+}
+
+.caja_a {	
+	text-align:center;
+	color: #dbdbdb;
+    background: #000;
+	padding: 120px 0;
+}
+.caja_a p{
+	margin: 0 0 20px;
+	letter-spacing: 2px;
+	font-size: 11px;
+    line-height: 14px;
+    font-weight: 500;
+}
+.caja_a h2{
+	font-size:40px;
+	font-weight:600;
+	color: #FFF;
+    line-height: 45px;
+}
+.caja_b{	
+	text-align:left;
+	padding: 120px 0;/*T R B L*/	
+}
+.imgLogo{
+	width: 70%; height:70%;
+	float: right;
+	margin-top:30px;
+	padding:0 15px;	
+}
+.caja_b h1{
+	padding: 0px 0;/*T R B L*/
+	color: #ff214f;
+	font-size: 36px;
+    line-height: 41px;
+	font-weight: 500;
+	margin: 0 0 18px;
+	
+}
+.caja_b h3{
+	color: #232323;
+	font-weight: 500;
+	font-size: 22px;
+    line-height: 26px;
+	margin: 0 0 18px;
+	
+}
+.caja_b p{
+	color:#6F6F6F;
+	font-size:14px;
+	margin: 0 0 20px;
+	text-align: justify;
+	padding: 0 70px 0 0 ;/*T R B L*/
+	margin: 0 70px 0 0 ;/*T R B L*/
+
+}
+.caja_c{
+	padding: 40px 0 0 0 ;/*T R B L*/
+	margin: 0 0 0 0 ;/*T R B L*/
+	color:#6F6F6F;
+	font-style: normal;
+	
+}
+
+.phone2{
+	font-size: 14px; 	
+	
+}
+.email2{
+	font-size: 13px;
+	
+}
+.caja_c p{
+	font-size: 12px;
+}
+
+
+/* Para mobiles */
+@media only screen and (max-width:599px){
+	.col-m-1{
+		width:8.33%;
+	}
+	.col-m-2{
+		width:16.66%;
+	}
+	.col-m-3{
+		width:25%;
+	}
+	.col-m-4{
+		width:33.33%;
+	}
+	.col-m-5{
+		width:41.66%;
+	}
+	.col-m-6{
+		width:50%;
+	}
+	.col-m-7{
+		width:58.33%;
+	}
+	.col-m-8{
+		width:66.66%;
+	}
+	.col-m-9{
+		width:75%;
+	}
+	.col-m-10{
+		width:83.33%;
+	}
+	.col-m-11{
+		width:91.66%;
+	}
+	.col-m-12{
+		width:100%;
+	}
+	
+	.menu_bar {
+		display:block;
+		width:100%;		
+	
+	/*relleno*/
+	padding:0px 0px 20px 0px;	
+	}	
+	.menu_bar .bt-menu {
+		display:block;
+		padding:10px;
+		background:#024959;
+		color:#000;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:12px;		
+		background:#ffffff;
+	}
+	.menu_bar span{
+		float:right;
+		font-size:20px;
+	}
+	#menu_h {
+		width:100%;
+		height:auto;		
+		margin:0;
+		position:absolute;		
+		background:rgba(0,0,0,0.9);		
+	}	
+	#menu_h ul li {
+		display:block;
+		float:none;		
+		border-bottom:0.5px solid rgba(255,255,255,0.3);
+	}
+	#menu_h ul li a{
+		color:#ffffff;
+	}
+}
+
+/* Para tablets :*/
+@media only screen and (min-width:600px){
+	.col-s-1{
+		width:8.33%;
+	}
+	.col-s-2{
+		width:16.66%;
+	}
+	.col-s-3{
+		width:25%;
+	}
+	.col-s-4{
+		width:33.33%;
+	}
+	.col-s-5{
+		width:41.66%;
+	}
+	.col-s-6{
+		width:50%;
+	}
+	.col-s-7{
+		width:58.33%;
+	}
+	.col-s-8{
+		width:66.66%;
+	}
+	.col-s-9{
+		width:75%;
+	}
+	.col-s-10{
+		width:83.33%;
+	}
+	.col-s-11{
+		width:91.66%;
+	}
+	.col-s-12{
+		width:100%;
+	}
+	
+}
+/* Para escritorio:*/
+@media only screen and (min-width:780px){
+	.col-1{
+		width:8.33%;
+	}
+	.col-2{
+		width:16.66%;
+	}
+	.col-3{
+		width:25%;
+	}
+	.col-4{
+		width:33.33%;
+	}
+	.col-5{
+		width:41.66%;
+	}
+	.col-6{
+		width:50%;
+	}
+	.col-7{
+		width:58.33%;
+	}
+	.col-8{
+		width:66.66%;
+	}
+	.col-9{
+		width:75%;
+	}
+	.col-10{
+		width:83.33%;
+	}
+	.col-11{
+		width:91.66%;
+	}
+	.col-12{
+		width:100%;
+	}
+}
+
+.ok{
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	color: green;
+}
+
+.bad{
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	color: red;
+}
