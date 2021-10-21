@@ -22,9 +22,9 @@ body{
 form{
 	
 	width:80%;
-	border:1px solid #ccc;
+	border:1px solid rgba(167, 170, 1, 0.514);
 	padding: 20px;
-	background:#eee;
+	background:rgba(238, 238, 238, 0.493);
 	border-radius:15px;
 	margin-bottom: 50px;	
 }
@@ -39,17 +39,18 @@ input[type=text],input[type=number],textarea{
 	margin: 20px 0 0 0;
 	padding: 10px 0 10px 0;
 	width:70%;
-	border:1px solid #000;
-	border-radius:0px;
+	border:1px solid  rgba(167, 170, 1, 0.514);
+	border-radius:5px;
 }
+
 #btnEnviar{
 	margin:20px 0 0;
-	padding:9px 38px;
-	background: #FF214F;
-	border:1px solid #FF214F;
-	border-radius:15px;
+	padding:9px 120px;
+	background: #f1c602;
+	border:1px solid #f1c602;
+	border-radius:5px;
 	cursor:pointer;
-	color:#FFFFFF;
+	color:#000;
 	font-weight:bold;	
 	text-align:center;	
 }
@@ -57,10 +58,25 @@ input[type=text],input[type=number],textarea{
 	background: #FFFFFF;
 	color:#FF214F;
 }
+.ok{
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	color: #1e6;
+}
+
+.bad{
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	color:#a22;
+}
 form{	
 	padding: 20px;
 	margin:20px;
+	margin-bottom: 30px;
 }
+
 
 .Contactanos{
 	text-align:left;
@@ -415,16 +431,3 @@ img{
 	}
 }
 
-.ok{
-	text-align: center;
-	width: 100%;
-	padding: 12px;
-	color: green;
-}
-
-.bad{
-	text-align: center;
-	width: 100%;
-	padding: 12px;
-	color: red;
-}

@@ -90,7 +90,7 @@
                     Cada año, aproximadamente, más de 300.000 turistas eligen la ciudad de la Amistad por sus nobles características, cultura, tradición, infraestructuras y propuesta gastronómica; y nos es muy grato poder ofrecerles nuestra propuesta de alojamiento y restauración para poder disfrutar y vivir la experiencia en nuestra heroica ciudad.
                     Nos ponemos a su disposición para hacer, que su estancia, sea lo más agradable posible.
                     Una vez más, gracias por confiar en nosotros y en el Hotel Casa Blanca.</p>
-                    <a href="contacto.html" class="btn btn--contac">Contact</a>
+                    <a href="contacto.php" class="btn btn--contac">Contact</a>
                 </div>
             </div>
         </section>

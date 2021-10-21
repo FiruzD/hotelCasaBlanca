@@ -9,9 +9,8 @@
 </head>
 <body>
 
-<form action="" method="POST">  
-  <div 
-   class="form-group">
+<form  method="POST">  
+  <div class="form-group">
     <h2 class="heading">hotel Casa Blanca</h2>
 
     <div class="controls">
@@ -42,11 +41,11 @@
             <label for="post-code"> Número de Documento</label>
           </div>         
         </div>
-      </div>
+    </div>
 
     <div class="controls">
-      <input type="text" id="email" class="floatLabel" name="email">
-      <label for="email">Email</label>
+      <input type="text" id="correo" class="floatLabel" name="correo">
+      <label for="correo">Email</label>
     </div>    
 
     <div class="controls">
@@ -86,85 +85,90 @@
   </div>
   <!--  detalles -->
   <div class="form-group">
+
     <h2 class="heading">detalles</h2>
+
     <div class="grid">
-    <div class="col-1-4 col-1-4-sm">
-      <div class="controls">
-        <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
-        <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;llegada</label>
-      </div>      
-    </div>
-    <div class="col-1-4 col-1-4-sm">
-      <div class="controls">
-        <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
-        <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Salida</label>
-      </div>      
-    </div>
+      <div class="col-1-4 col-1-4-sm">
+        <div class="controls">
+          <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+          <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;llegada</label>
+        </div>      
       </div>
-      <div class="grid">
+      <div class="col-1-4 col-1-4-sm">
+        <div class="controls">
+          <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+          <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Salida</label>
+        </div>      
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="col-1-3 col-1-3-sm">
+        <div class="controls">
+          <i class="fa fa-sort"></i>
+          <select class="floatLabel" name="cant">
+            <option value="blank"></option>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+          </select>
+          <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;Personas</label>
+        </div>      
+      </div>
+      <div class="col-1-3 col-1-3-sm">
+        <div class="controls">
+          <i class="fa fa-sort"></i>
+          <select class="floatLabel" name="habitacion">
+            <option value="blank"></option>
+            <option value="deluxe" selected>Con Baño</option>
+            <option value="Zuri-zimmer">Sin Baño</option>
+          </select>
+          <label for="fruit">Habitaciones</label>
+        </div>     
+      </div>
+
     <div class="col-1-3 col-1-3-sm">
       <div class="controls">
         <i class="fa fa-sort"></i>
-        <select class="floatLabel" name="lista">
+        <select class="floatLabel" name="TipoHab">
           <option value="blank"></option>
-          <option value="1">1</option>
-          <option value="2" selected>2</option>
-          <option value="3">3</option>
+          <option value="single-bed">Simple</option>
+          <option value="double-bed" selected>doble</option>
+          <option value="single-bed">triple</option>
+          <option value="double-bed" >Familiar</option>
+          <option value="double-bed" >Matrimonial</option>
         </select>
-        <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;Personas</label>
-      </div>      
-    </div>
-    <div class="col-1-3 col-1-3-sm">
-    <div class="controls">
-      <i class="fa fa-sort"></i>
-      <select class="floatLabel" name="habitacion">
-        <option value="blank"></option>
-        <option value="deluxe" selected>Con Baño</option>
-        <option value="Zuri-zimmer">Sin Baño</option>
-      </select>
-      <label for="fruit">Habitaciones</label>
-     </div>     
-    </div>
-
-    <div class="col-1-3 col-1-3-sm">
-    <div class="controls">
-      <i class="fa fa-sort"></i>
-      <select class="floatLabel" name="TipoHab">
-        <option value="blank"></option>
-        <option value="single-bed">Simple</option>
-        <option value="double-bed" selected>doble</option>
-        <option value="single-bed">triple</option>
-        <option value="double-bed" >Familiar</option>
-         <option value="double-bed" >Matrimonial</option>
-      </select>
-      <label for="fruit">Tipo De Habitacion</label>
-     </div>     
+        <label for="fruit">Tipo De Habitacion</label>
+      </div>     
     </div>
       
-     </div>
+    </div>
       <div class="grid">
+
         <p class="info-text">Describa sus necesidades, por ejemplo, camas supletorias, cunas para niños</p>
         <br>
-        <div class="controls">
-          <textarea name="comments" class="floatLabel" id="comments"></textarea>
-          <label for="comments">Commentarios</label>
+          <div class="controls">
+            <textarea name="comments" class="floatLabel" id="comments"></textarea>
+            <label for="comments">Commentarios</label>
           </div>
+
             <button type="submit" value="Submit" name="insertar" class="col-1-4">Enviar</button>
+            
             <a href="index.php" class="button">Volver</a>
             
       </div>  
   </div>
 </form>
 
-  <!-- se incluye el archivo de registro para las reservaciones-->
-    <?php
-      include("consulta.php");
-    ?> 
+<?php
+    include("Registros.php");
+?>   
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://raw.githubusercontent.com/andiio/selectToAutocomplete/master/jquery-ui-autocomplete.js'></script>
-<script src='https://raw.githubusercontent.com/andiio/selectToAutocomplete/master/jquery.select-to-autocomplete.js'></script>
-<script src='https://raw.githubusercontent.com/andiio/selectToAutocomplete/master/jquery.select-to-autocomplete.min.js'></script><script  src="js/reserva.js"></script>
+  <script src='https://raw.githubusercontent.com/andiio/selectToAutocomplete/master/jquery-ui-autocomplete.js'></script>
+  <script src='https://raw.githubusercontent.com/andiio/selectToAutocomplete/master/jquery.select-to-autocomplete.js'></script>
+  <script src='https://raw.githubusercontent.com/andiio/selectToAutocomplete/master/jquery.select-to-autocomplete.min.js'></script><script  src="js/reserva.js"></script>
 
 </body>
 </html>

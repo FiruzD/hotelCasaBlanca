@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2021 a las 07:50:46
+-- Tiempo de generación: 21-10-2021 a las 02:37:03
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -34,7 +34,6 @@ CREATE TABLE `cliente` (
   `cCliDireccion` varchar(100) NOT NULL,
   `dCliFechaNac` date NOT NULL,
   `cCliCiudad` varchar(20) NOT NULL,
-  `cCliPais` varchar(20) NOT NULL,
   `cCliCodigoPostal` varchar(10) NOT NULL,
   `nPerCodigo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -47,18 +46,13 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `consulta` (
   `nConCodigo` int(11) NOT NULL,
+  `cConNombre` varchar(50) NOT NULL,
+  `cConApePat` varchar(50) NOT NULL,
+  `cConApeMat` varchar(50) NOT NULL,
   `cConTelefono` varchar(20) NOT NULL,
   `cConEmail` varchar(50) NOT NULL,
-  `cConDescripcion` varchar(300) NOT NULL,
-  `nPerCodigo` int(11) NOT NULL
+  `cConDescripcion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `consulta`
---
-
-INSERT INTO `consulta` (`nConCodigo`, `cConTelefono`, `cConEmail`, `cConDescripcion`, `nPerCodigo`) VALUES
-(0, '952240084', 'dcasusol@gmail.com', 'tienen servicio de wifi?', 26);
 
 -- --------------------------------------------------------
 
@@ -85,16 +79,10 @@ CREATE TABLE `persona` (
   `nPerCodigo` int(11) NOT NULL,
   `cPerNombre` varchar(50) NOT NULL,
   `cPerApePat` varchar(50) NOT NULL,
-  `cPerApeMat` varchar(50) NOT NULL
+  `cPerApeMat` varchar(50) NOT NULL,
+  `cPerTipoDocument` varchar(10) NOT NULL,
+  `cPerNumDocument` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `persona`
---
-
-INSERT INTO `persona` (`nPerCodigo`, `cPerNombre`, `cPerApePat`, `cPerApeMat`) VALUES
-(26, 'Firuz Daniel', 'Aguilar', 'Casusol'),
-(29, 'Dagner', 'Chuman', 'Lluen');
 
 -- --------------------------------------------------------
 
@@ -106,25 +94,11 @@ CREATE TABLE `reservacion` (
   `nResCodigo` int(11) NOT NULL,
   `dResFechaLlegada` date NOT NULL,
   `dResFechaSalida` date NOT NULL,
-  `nResCantPersonas` int(100) NOT NULL,
-  `nResHabitaciones` varchar(20) NOT NULL,
+  `nResCantPersonas` int(11) NOT NULL,
+  `cResHabitaciones` varchar(20) NOT NULL,
   `cResTipoHabitacion` varchar(50) NOT NULL,
   `cResComentarios` varchar(300) NOT NULL,
-  `dResFechaRegistro` varchar(20) NOT NULL,
-  `nPerCodigo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tipopersona`
---
-
-CREATE TABLE `tipopersona` (
-  `nTipCodigo` int(11) NOT NULL,
-  `cTipDocumento` varchar(20) NOT NULL,
-  `cTipNumDocumento` varchar(50) NOT NULL,
-  `nPerCodigo` int(11) NOT NULL
+  `cCliCodigo` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -136,21 +110,20 @@ CREATE TABLE `tipopersona` (
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`nCliCodigo`),
-  ADD KEY `nPerCodigo` (`nPerCodigo`);
+  ADD KEY `pknPerCodigo` (`nPerCodigo`);
 
 --
 -- Indices de la tabla `consulta`
 --
 ALTER TABLE `consulta`
-  ADD PRIMARY KEY (`nConCodigo`),
-  ADD KEY `nPerCodigo` (`nPerCodigo`);
+  ADD PRIMARY KEY (`nConCodigo`);
 
 --
 -- Indices de la tabla `empleado`
 --
 ALTER TABLE `empleado`
   ADD PRIMARY KEY (`nEmpCodigo`),
-  ADD KEY `nPerCodigo` (`nPerCodigo`);
+  ADD KEY `pknPerCodigo` (`nPerCodigo`);
 
 --
 -- Indices de la tabla `persona`
@@ -163,36 +136,41 @@ ALTER TABLE `persona`
 --
 ALTER TABLE `reservacion`
   ADD PRIMARY KEY (`nResCodigo`),
-  ADD KEY `pknPerCodigo` (`nPerCodigo`);
-
---
--- Indices de la tabla `tipopersona`
---
-ALTER TABLE `tipopersona`
-  ADD PRIMARY KEY (`nTipCodigo`),
-  ADD KEY `pknPerCodigo` (`nPerCodigo`);
+  ADD KEY `pkcCliCodigo` (`cCliCodigo`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
+-- AUTO_INCREMENT de la tabla `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `nCliCodigo` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `consulta`
+--
+ALTER TABLE `consulta`
+  MODIFY `nConCodigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `empleado`
+--
+ALTER TABLE `empleado`
+  MODIFY `nEmpCodigo` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `nPerCodigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `nPerCodigo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `reservacion`
 --
 ALTER TABLE `reservacion`
-  MODIFY `nResCodigo` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `tipopersona`
---
-ALTER TABLE `tipopersona`
-  MODIFY `nTipCodigo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `nResCodigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
@@ -205,12 +183,6 @@ ALTER TABLE `cliente`
   ADD CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`nPerCodigo`) REFERENCES `persona` (`nPerCodigo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `consulta`
---
-ALTER TABLE `consulta`
-  ADD CONSTRAINT `consulta_ibfk_1` FOREIGN KEY (`nPerCodigo`) REFERENCES `persona` (`nPerCodigo`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Filtros para la tabla `empleado`
 --
 ALTER TABLE `empleado`
@@ -220,13 +192,7 @@ ALTER TABLE `empleado`
 -- Filtros para la tabla `reservacion`
 --
 ALTER TABLE `reservacion`
-  ADD CONSTRAINT `reservacion_ibfk_1` FOREIGN KEY (`nPerCodigo`) REFERENCES `persona` (`nPerCodigo`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `tipopersona`
---
-ALTER TABLE `tipopersona`
-  ADD CONSTRAINT `tipopersona_ibfk_1` FOREIGN KEY (`nPerCodigo`) REFERENCES `persona` (`nPerCodigo`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `reservacion_ibfk_1` FOREIGN KEY (`cCliCodigo`) REFERENCES `cliente` (`nCliCodigo`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

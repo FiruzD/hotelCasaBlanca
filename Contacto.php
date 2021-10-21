@@ -12,8 +12,8 @@
     <link href = "https://file.myfontastic.com/AkuhujgusLihXceob9pNxk/icons.css" rel = "stylesheet">
     <link rel="stylesheet" href="css/EstiloContactanos.css"/>
 
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/formulario.js" ></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/formulario.js" ></script>
 </head>
 <body>
     <header class="header" id="inicio">
@@ -34,66 +34,35 @@
         </div>  
     </header>
 
-<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v9.0'
-          });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your Chat Plugin code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="218812995380898"
-  logged_in_greeting="Hola que tal  En que te puedo Ayudar?"
-  logged_out_greeting="Hola que tal  En que te puedo Ayudar?">
-      </div>
-
-
-
-
-
-    
-   <section>                               
+    <section>                               
             <div class="row">
                 <div class="interior">  
                     <div class="col-12">
                         <div class="col-6">
                             <h1 class="Contactanos">Contáctanos</h1>
-                            <p class="descripcion">GLOBAL HOME agradece su confianza y preferencia. Si tienes alguna consulta o inquietud sobre algunos de nuestros proyectos o procesos, no dudes en comunicarte con nosotros a través de este formulario y te responderemos a la brevedad posible.</p>
-                            <p class="informes">No dudes en comunicarte con nosotros a informes@globalhome.com.pe</p>
+                            <p class="descripcion">HOTEL CASA BLANCA agradece su confianza y preferencia. Si tienes alguna consulta o inquietud sobre algunos de nuestros servicios, no dudes en comunicarte con nosotros a través de este formulario y te responderemos a la brevedad posible.</p>
+                            <p class="informes">No dudes en comunicarte con nosotros a informes@casablancahotel.com.pe</p>
                         </div> 
                         <div class="col-6">
 
                             <form  method="POST" name="formulario" id="formulario">
                                 <div>                                   
-                                    <input type="text" name="txtNombre" id="txtNombre" placeholder="Ingrese nombre *" autofocus />
+                                    <input type="text" name="txtNombre" id="txtNombre" placeholder="Ingrese nombre " autofocus />
                                 </div>
                                 <div>                                   
-                                    <input type="text" name="txtApe1" id="txtApe1" placeholder="Ingrese primer apellido *" autofocus />
+                                    <input type="text" name="txtApe1" id="txtApe1" placeholder="Ingrese primer apellido" autofocus />
                                 </div>
                                 <div>                                   
-                                    <input type="text" name="txtApe2" id="txtApe2" placeholder="Ingrese segundo apellido *" autofocus />
+                                    <input type="text" name="txtApe2" id="txtApe2" placeholder="Ingrese segundo apellido" autofocus />
                                 </div>
                                 <div>                                   
-                                    <input type="number" name="txtCellphone" id="txtCellphone" placeholder="Teléfono / Celular *" />
+                                    <input type="number" name="txtCellphone" id="txtCellphone" placeholder="Teléfono / Celular" autofocus/>
                                 </div>
                                 <div>                                   
-                                    <input type="text" name="txtGmail" id="txtGmail" placeholder="E-mail *" />
+                                    <input type="text" name="txtGmail" id="txtGmail" placeholder="E-mail" autofocus/>
                                 </div>                          
                                 <div>                                   
-                                    <textarea name="txtObservaciones" rows="5" cols="40"></textarea>
+                                    <textarea name="txtObservaciones" rows="5" cols="40" placeholder="Describe un comentario" autofocus></textarea>
                                 </div>          
                                 <div>
                                     <input type="submit" value="Enviar" name="btnEnviar" id="btnEnviar" />
@@ -115,7 +84,7 @@
                 </div>                      
             </div>
 
-   </section>   
+    </section>   
     <footer class="main-footer" id="contacto" >
             <div class="container container--flex">
                 <div class="column column--33">
@@ -136,7 +105,7 @@
                 </div>
                 <p class="copy">©2021 Hotel Casa Blanca | Universidad Señor de Sipán | Ingeniería de Sistemas</p>
             </div>
-        </footer> 
+    </footer> 
     <script src="js/menu.js"></script>
     <script src="js/lightbox.js"></script>
 </body>
